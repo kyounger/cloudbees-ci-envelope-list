@@ -1,4 +1,4 @@
-VERSION=2.249.2.4
+VERSION=2.263.2.2
 ENVELOPE=envelope-core-mm
 curl -L "https://jenkins-updates.cloudbees.com/update-center/$ENVELOPE/update-center.json?version=$VERSION" | sed '1d' | sed '$d' > temp.json
 jq '.envelope.plugins | to_entries | [.[] | [.key, .value.name, .value.tier, .value.version]]' temp.json
